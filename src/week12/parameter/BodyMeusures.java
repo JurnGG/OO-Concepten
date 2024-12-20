@@ -1,4 +1,4 @@
-package week8.model;
+package week12.parameter;
 
 public class BodyMeusures{
     private double bust;

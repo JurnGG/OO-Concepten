@@ -1,33 +1,30 @@
-package week8.model;
-
-import week12.parameter.BodyMeusures;
+package week12.parameter;
 
 public class Model extends Person {
-    private BodyMeusures bodyMeusures;
+    private BodyMeusures bodyMeasures;
     private Address address;
 
     public Model(String name) {
         super(name);
-        bodyMeusures = new BodyMeusures();
+        this.bodyMeasures = new BodyMeusures();
     }
 
     public Model(String name, double bust, double hips, double waist) {
         super(name);
-        bodyMeusures = new BodyMeusures(bust,hips,waist);
-        address = null;
+        this.bodyMeasures = new BodyMeusures(bust, hips, waist);
+        this.address = null;
     }
 
     public double getBust() {
-        return bodyMeusures.getBust();
+        return bodyMeasures.getBust();
     }
 
-
     public double getHips() {
-        return bodyMeusures.getHips();
+        return bodyMeasures.getHips();
     }
 
     public double getWaist() {
-        return bodyMeusures.getWaist();
+        return bodyMeasures.getWaist();
     }
 
     public Address getAddress() {
@@ -40,8 +37,8 @@ public class Model extends Person {
 
     @Override
     public String toString() {
-        return "Naam: " + name + "\n" +
-                "Adres: " + ((address != null)?address:"onbekend") + "\n" +
-                "Maten: " + bodyMeusures;
+        return "Name: " + name + "\n" +
+                "Address: " + ((address != null) ? address : "unknown") + "\n" +
+                "Measurements: " + bodyMeasures;
     }
 }
